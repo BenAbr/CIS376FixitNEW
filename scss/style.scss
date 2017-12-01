@@ -1,0 +1,78 @@
+body {
+  padding: 15px;
+  margin: 0;
+  background: grey;
+}
+.tagarea {
+  display: none;
+}
+.tag-box {
+  list-style: none;
+  padding: 5px;
+  margin: 10px;
+  display: inline-block;
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 4px;
+  li {
+    padding: 10px 10px;
+    float: left;
+    display: inline-block;
+    &.tags {
+      background: white;
+      color: black;
+      border-radius: 4px;
+      margin: 5px 5px;
+      position: relative;
+      .close {
+        display: inline-block;
+        position: absolute;
+        color: black;
+        overflow: hidden;
+        width: 0;
+        right: 0;
+        height: 18px;
+        cursor: pointer;
+        top: 4px;
+        &:after {
+          content: "X";
+        }
+      }
+      &.edit {
+        background: none;
+        border: 1px solid blue;
+        border-radius: 10px;
+        color: blue;
+        .input-tag {
+          height: auto;
+        }
+        &:hover {
+          padding: 10px 10px;
+        }
+      }
+      &.danger {
+        background: #f00;
+        opacity: 0.8;
+      }
+      &:hover {
+        padding-right: 20px;
+        .close {
+          width: 15px;
+        }
+      }
+    }
+    .input-tag {
+      color: aqua;
+      height: 24px;
+      vertical-align: middle;
+      border: none;
+      outline: none;
+      background: none;
+      &:hover,
+      &:focus {
+        outline: none;
+        border: none;
+      }
+    }
+  }
+}
